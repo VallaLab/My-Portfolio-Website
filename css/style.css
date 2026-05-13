@@ -5,25 +5,25 @@
     box-sizing: border-box;
 }
 
-/* Stile generale della pagina */
+/* Sfondo principale */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
     min-height: 100vh;
 
     background:
-        radial-gradient(circle at center, #030712 0%, #0f172a 40%, transparent 70%),
-        radial-gradient(circle at top left, rgba(59, 130, 246, 0.45), transparent 35%),
-        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.45), transparent 35%),
+        radial-gradient(circle at center, #030712 0%, #0f172a 38%, transparent 68%),
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.55), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.55), transparent 38%),
         linear-gradient(135deg, #1e3a8a, #581c87);
 
     background-attachment: fixed;
 }
 
-/* Contenitore principale */
+/* Contenitore generale */
 .container {
     width: 90%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 60px 20px;
 }
@@ -31,102 +31,456 @@ body {
 /* Sezione profilo */
 .profile-section {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 }
 
-/* Immagine profilo rotonda */
+/* Foto profilo */
 .profile-img {
     width: 180px;
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid #38bdf8;
+    border: 4px solid #60a5fa;
     margin-bottom: 25px;
-    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+    box-shadow: 0 0 35px rgba(96, 165, 250, 0.6);
 }
 
-/* Titolo principale */
+/* Nome */
 .profile-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+/* Sottotitolo */
+.subtitle {
+    font-size: 1.2rem;
+    color: #c4b5fd;
+    margin-bottom: 25px;
+    font-weight: normal;
 }
 
 /* Descrizione */
 .description {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto;
     font-size: 1.1rem;
-    line-height: 1.7;
-    color: #d1d5db;
+    line-height: 1.8;
+    color: #e5e7eb;
 }
 
-/* Sezione competenze */
+/* Card generiche */
+.content-card,
+.skills-section {
+    background: rgba(15, 23, 42, 0.75);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 22px;
+    padding: 35px;
+    margin-bottom: 35px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+}
+
+/* Titoli sezioni */
+.content-card h2,
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #bfdbfe;
+}
+
+/* Sottotitoli */
+.item h3,
+.languages h3,
+.other-skills h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/* Periodo lavoro */
+.period {
+    color: #c4b5fd;
+    margin-bottom: 15px;
+}
+
+/* Liste */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #e5e7eb;
+}
+
+/* Paragrafi */
+p {
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+/* Lingue */
+.languages {
+    margin-top: 25px;
+}
+
+/* Sezione skill */
 .skills-section {
     text-align: center;
 }
 
-.skills-section h2 {
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
-
-/* Griglia dei linguaggi */
+/* Griglia skill */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 22px;
+    margin-top: 30px;
 }
 
-/* Singolo quadretto */
+/* Singola skill card */
 .skill-card {
-    background-color: #1e293b;
-    padding: 25px 20px;
-    border-radius: 16px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #ffffff;
-    border: 2px solid transparent;
-    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 
-    transition: 
+    background: rgba(30, 41, 59, 0.9);
+    padding: 28px 20px;
+    border-radius: 18px;
+    border: 2px solid transparent;
+
+    cursor: pointer;
+    min-height: 140px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+/* Nome linguaggio */
+.skill-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Percentuale nascosta */
+.skill-percent {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #93c5fd;
+    opacity: 0;
+    transform: translateY(10px);
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
+}
+
+/* Barra skill */
+.skill-bar {
+    width: 85%;
+    height: 8px;
+    background-color: rgba(148, 163, 184, 0.25);
+    border-radius: 20px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+/* Riempimento barra */
+.skill-progress {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    transition: width 0.5s ease;
+}
+
+/* Effetto hover */
+.skill-card:hover,
+.skill-card:focus,
+.skill-card.show-percent {
+    transform: translateY(-10px) scale(1.04);
+    border-color: #60a5fa;
+    box-shadow: 0 15px 35px rgba(96, 165, 250, 0.35);
+    background-color: rgba(15, 23, 42, 0.95);
+}
+
+/* Quando passo sopra, il nome si sposta leggermente */
+.skill-card:hover .skill-name,
+.skill-card:focus .skill-name,
+.skill-card.show-percent .skill-name {
+    transform: translateY(-6px);
+}
+
+/* Quando passo sopra, compare la percentuale */
+.skill-card:hover .skill-percent,
+.skill-card:focus .skill-percent,
+.skill-card.show-percent .skill-percent {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Quando passo sopra, la barra si riempie */
+.skill-card:hover .skill-progress,
+.skill-card:focus .skill-progress,
+.skill-card.show-percent .skill-progress {
+    width: var(--level);
+}
+
+/* Altre competenze */
+.other-skills {
+    margin-top: 40px;
+    text-align: left;
+    background-color: rgba(15, 23, 42, 0.6);
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.other-skills p {
+    margin-bottom: 10px;
+}
+
+/* Contatti */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.contact-link {
+    display: block;
+    text-decoration: none;
+    color: #e5e7eb;
+    background-color: rgba(30, 41, 59, 0.85);
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+
+    transition:
         transform 0.3s ease,
         background-color 0.3s ease,
-        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background-color: rgba(59, 130, 246, 0.25);
+    color: #ffffff;
+}
+/* Sezione fotografia */
+.photography-section {
+    overflow: hidden;
+}
+
+/* Intestazione fotografia */
+.photography-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.photography-header h2 {
+    margin-bottom: 10px;
+}
+
+.photography-header p {
+    color: #e5e7eb;
+}
+
+/* Bottoni galleria */
+.gallery-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.gallery-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #38bdf8, #a855f7);
+    color: #ffffff;
+
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
         box-shadow 0.3s ease;
 }
 
-/* Animazione quando passi sopra */
-.skill-card:hover {
-    transform: translateY(-10px) scale(1.05);
-    background-color: #0f172a;
-    border-color: #38bdf8;
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+.gallery-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.45);
 }
 
-/* Effetto aggiunto tramite JavaScript */
-.skill-card.active {
-    animation: pulse 0.4s ease;
+/* Galleria scorrevole */
+.photo-gallery {
+    display: flex;
+    gap: 22px;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+
+    padding: 10px 5px 20px;
 }
 
-/* Animazione pulse */
-@keyframes pulse {
-    0% {
+/* Scrollbar galleria */
+.photo-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.photo-gallery::-webkit-scrollbar-track {
+    background: rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+    border-radius: 20px;
+}
+
+/* Singola foto */
+.photo-card {
+    min-width: 320px;
+    aspect-ratio: 4 / 5;
+
+    border-radius: 22px;
+    overflow: hidden;
+
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+    background-color: rgba(15, 23, 42, 0.8);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+/* Effetto hover */
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(96, 165, 250, 0.35);
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.15);
+}
+/* Lightbox per aprire le foto */
+.lightbox {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+    padding: 30px;
+}
+
+/* Quando la lightbox è attiva */
+.lightbox.active {
+    display: flex;
+}
+
+/* Immagine aperta */
+.lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+
+    object-fit: contain;
+    border-radius: 18px;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+
+    animation: zoomIn 0.25s ease;
+}
+
+/* Bottone chiusura */
+.lightbox-close {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(135deg, #38bdf8, #a855f7);
+    color: white;
+
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.lightbox-close:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(168, 85, 247, 0.5);
+}
+
+/* Animazione apertura */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.85);
+        opacity: 0;
+    }
+
+    to {
         transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.08);
-    }
-
-    100% {
-        transform: scale(1);
+        opacity: 1;
     }
 }
 
-/* Responsive per telefoni */
+/* Cursore sulle foto cliccabili */
+.photo-card img {
+    cursor: pointer;
+}
+/* Responsive */
 @media screen and (max-width: 600px) {
+
+    .container {
+        padding: 40px 15px;
+    }
+
     .profile-section h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
     }
 
     .description {
@@ -137,4 +491,27 @@ body {
         width: 140px;
         height: 140px;
     }
+
+    .content-card,
+    .skills-section {
+        padding: 25px;
+    }
+
+    .content-card h2,
+    .skills-section h2 {
+        font-size: 1.6rem;
+    }
+    .photography-header {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.gallery-buttons {
+    align-self: center;
+}
+
+.photo-card {
+    min-width: 230px;
+    height: 300px;
+}
 }

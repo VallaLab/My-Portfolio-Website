@@ -3,53 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il mio Portfolio</title>
+    <title>Portfolio - Daniele Vallauri</title>
 
-    
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <main class="container">
 
+        <!-- SEZIONE PROFILO -->
         <section class="profile-section">
 
-           
+            <!-- 
+                Inserisci qui la tua foto.
+                Metti il file dentro:
+                assets/images/
+            -->
             <img 
                 src="assets/images/Daniele-Ciliegi.jpg" 
-                alt="Foto profilo" 
+                alt="Foto profilo di Daniele Vallauri" 
                 class="profile-img"
             >
 
-            <h1>About Me</h1>
+            <h1>Daniele Vallauri</h1>
 
-            
+            <h2 class="subtitle">Studente ITIS Informatica | Web Developer in formazione</h2>
+
             <p class="description">
-              Studente al quinto anno ITIS Informatica, con interesse per lo sviluppo web full stack, lo sviluppo software e l’informatica applicata. Attualmente sto approfondendo database relazionali, SQL, programmazione web lato server con PHP. Sono motivato a cambiare percorso professionale e orientarmi verso il settore della programmazione.
+                Studente al quinto anno ITIS Informatica, con interesse per lo sviluppo web full stack, 
+                lo sviluppo software e l’informatica applicata. Attualmente sto approfondendo database 
+                relazionali, SQL e programmazione web lato server con PHP. Sono motivato a cambiare 
+                percorso professionale e orientarmi verso il settore della programmazione.
             </p>
 
         </section>
 
+
+        <!-- SEZIONE EDUCAZIONE -->
+        <section class="content-card">
+            <h2>Educazione</h2>
+
+            <div class="item">
+                <h3>Diploma ITIS Informatica</h3>
+                <p>Voto finale: …/100</p>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE ESPERIENZA LAVORATIVA -->
+        <section class="content-card">
+            <h2>Esperienza lavorativa</h2>
+
+            <div class="item">
+                <h3>Cartiera Pirinoli</h3>
+                <p class="period">Periodo: 2011 – oggi</p>
+
+                <ul>
+                    <li>Gestione del personale di reparto.</li>
+                    <li>Gestione e utilizzo di macchine da taglio.</li>
+                    <li>Jolly di reparto, con supporto operativo su diverse attività produttive.</li>
+                    <li>Esperienza nell’utilizzo e nella gestione di diversi macchinari.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE EXTRA CURRICULARE -->
+        <section class="content-card">
+            <h2>Extra curriculare</h2>
+
+            <ul>
+                <li>Studio autonomo della programmazione.</li>
+                <li>Fotografo non professionista con esperienza nello scatto e nella postproduzione.</li>
+                <li>Studio delle basi di sviluppo web frontend e backend.</li>
+                <li>Approfondimento di HTML, CSS, JavaScript, SQL.</li>
+            </ul>
+
+            <div class="languages">
+                <h3>Lingue</h3>
+                <p>Inglese: B1</p>
+                <p>Francese: A2</p>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE PROGETTI -->
+        <section class="content-card">
+            <h2>Progetti</h2>
+
+            <div class="item">
+                <h3>Progetto Arduino</h3>
+
+                <ul>
+                    <li>Gestione di sensori tramite modulo Arduino.</li>
+                    <li>Salvataggio dei dati rilevati su database.</li>
+                    <li>Gestione della connessione Wi-Fi per la trasmissione dei dati.</li>
+                    <li>Utilizzo di chiamate HTTP per la comunicazione tra dispositivo e sistema web.</li>
+                    <li>Creazione di un’interfaccia web per la visualizzazione e la gestione dei dati.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- SEZIONE SKILL TECNICHE -->
         <section class="skills-section">
 
-            <h2>Linguaggi che conosco</h2>
+            <h2>Skill tecniche</h2>
 
             <div class="skills-grid">
 
-                <div class="skill-card">HTML</div>
-                <div class="skill-card">CSS</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">SQL</div>
-                <div class="skill-card">PHP</div>
-                <div class="skill-card">Python</div>
+                <div class="skill-card" data-percent="80%" style="--level: 80%;" tabindex="0">
+                    <span class="skill-name">HTML</span>
+                    <span class="skill-percent">80%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-percent="50%" style="--level: 50%;" tabindex="0">
+                    <span class="skill-name">CSS</span>
+                    <span class="skill-percent">50%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-percent="10%" style="--level: 10%;" tabindex="0">
+                    <span class="skill-name">JavaScript</span>
+                    <span class="skill-percent">10%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-percent="60%" style="--level: 60%;" tabindex="0">
+                    <span class="skill-name">SQL</span>
+                    <span class="skill-percent">60%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-percent="20%" style="--level: 20%;" tabindex="0">
+                    <span class="skill-name">PHP</span>
+                    <span class="skill-percent">20%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+                <div class="skill-card" data-percent="10%" style="--level: 10%;" tabindex="0">
+                    <span class="skill-name">Python</span>
+                    <span class="skill-percent">10%</span>
+
+                    <div class="skill-bar">
+                        <div class="skill-progress"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="other-skills">
+                <h3>Altre competenze</h3>
+
+                <p><strong>Web & Backend:</strong> ASP.NET Core</p>
+                <p><strong>Database:</strong> progettazione database relazionali, SQL</p>
+                <p><strong>Programmi:</strong> Photoshop, Lightroom</p>
+                <p><strong>Altro:</strong> fotografia, autonomia e gestione degli imprevisti</p>
+            </div>
+
+        </section>
+
+
+        <!-- SEZIONE FOTOGRAFIA -->
+        <section class="content-card photography-section">
+
+            <div class="photography-header">
+                <div>
+                    <h2>Photography is my passion</h2>
+
+                    <p>
+                        Alcuni scatti fotografici e lavori di postproduzione.
+                    </p>
+                </div>
+
+                <div class="gallery-buttons">
+                    <button class="gallery-btn" id="scrollLeft" type="button">←</button>
+                    <button class="gallery-btn" id="scrollRight" type="button">→</button>
+                </div>
+            </div>
+
+            <div class="photo-gallery" id="photoGallery">
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Castello Osaka.jpg" 
+                        alt="Castello di Osaka" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Cervo Nara.jpg" 
+                        alt="Cervo a Nara" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Chuerito Pagoda.jpg" 
+                        alt="Chuerito Pagoda" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Daibuzu Kamakura.jpg" 
+                        alt="Daibutsu di Kamakura" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/notturna tokyo tower_.jpg" 
+                        alt="Tokyo Tower di notte" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Tempio Senso-ji.jpg" 
+                        alt="Tempio Senso-ji" 
+                        loading="lazy"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img 
+                        src="assets/images/Tokyo Tower da Scale.jpg" 
+                        alt="Tokyo Tower dalle scale" 
+                        loading="lazy"
+                    >
+                </div>
 
             </div>
 
         </section>
 
+
+        <!-- SEZIONE CONTATTI -->
+        <section class="content-card contacts-section">
+            <h2>Contatti</h2>
+
+            <div class="contacts-grid">
+
+                <a href="mailto:vallauri1991@gmail.com" class="contact-link">
+                    Email: vallauri1991@gmail.com
+                </a>
+
+                <p class="contact-link">
+                    Mobile: ...
+                </p>
+
+                <a 
+                    href="https://www.linkedin.com/in/daniele-vallauri-762838165" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    LinkedIn
+                </a>
+
+                <a 
+                    href="https://github.com/VallaLab" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    GitHub
+                </a>
+
+                <a 
+                    href="https://vallalab.github.io/My-Portfolio-Website/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    Portfolio
+                </a>
+
+                <a 
+                    href="https://www.instagram.com/v.a.l.l.a.91/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    class="contact-link"
+                >
+                    Instagram
+                </a>
+
+            </div>
+        </section>
+
     </main>
 
-    
+
+    <!-- LIGHTBOX FOTO -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" type="button">×</button>
+
+        <img 
+            src="" 
+            alt="Foto ingrandita" 
+            id="lightboxImg"
+        >
+    </div>
+
+
     <script src="js/script.js"></script>
 </body>
 </html>
