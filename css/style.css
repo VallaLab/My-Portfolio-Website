@@ -1,0 +1,140 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Stile generale della pagina */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at center, #030712 0%, #0f172a 40%, transparent 70%),
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.45), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.45), transparent 35%),
+        linear-gradient(135deg, #1e3a8a, #581c87);
+
+    background-attachment: fixed;
+}
+
+/* Contenitore principale */
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Sezione profilo */
+.profile-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Immagine profilo rotonda */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    margin-bottom: 25px;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
+}
+
+/* Titolo principale */
+.profile-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Descrizione */
+.description {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #d1d5db;
+}
+
+/* Sezione competenze */
+.skills-section {
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+/* Griglia dei linguaggi */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+/* Singolo quadretto */
+.skill-card {
+    background-color: #1e293b;
+    padding: 25px 20px;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    border: 2px solid transparent;
+    cursor: pointer;
+
+    transition: 
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Animazione quando passi sopra */
+.skill-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background-color: #0f172a;
+    border-color: #38bdf8;
+    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+}
+
+/* Effetto aggiunto tramite JavaScript */
+.skill-card.active {
+    animation: pulse 0.4s ease;
+}
+
+/* Animazione pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive per telefoni */
+@media screen and (max-width: 600px) {
+    .profile-section h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .profile-img {
+        width: 140px;
+        height: 140px;
+    }
+}
