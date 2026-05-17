@@ -468,8 +468,161 @@ p {
 .photo-card img {
     cursor: pointer;
 }
+
+/* Sezione lingue */
+.languages-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Singola lingua */
+.language-card {
+    background-color: rgba(30, 41, 59, 0.65);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+/* Nome lingua + livello */
+.language-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.language-info h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+}
+
+.language-info span {
+    color: #c4b5fd;
+    font-weight: bold;
+}
+
+/* Barra principale */
+.language-bar {
+    position: relative;
+    width: 100%;
+    height: 14px;
+
+    background-color: rgba(148, 163, 184, 0.25);
+    border-radius: 999px;
+
+    overflow: visible;
+}
+
+/* Riempimento barra */
+.language-fill {
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #38bdf8, #a855f7);
+}
+
+/* Francese fermo su A1 */
+.french-fill {
+    width: 16.6%;
+}
+
+/* Inglese tra B1 e B2 */
+.english-fill {
+    width: 58%;
+}
+
+/* Giapponese da iniziare */
+.japanese-fill {
+    width: 0%;
+}
+
+/* Marker generale */
+.language-marker {
+    position: absolute;
+    top: -38px;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Testo del marker */
+.language-marker span {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #ffffff;
+
+    background-color: rgba(96, 165, 250, 0.35);
+    border: 1px solid rgba(147, 197, 253, 0.5);
+
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+/* Freccia sotto al marker */
+.language-marker::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 26px;
+    transform: translateX(-50%);
+
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 10px solid rgba(147, 197, 253, 0.65);
+}
+
+/* Posizione marker francese su A1 */
+.french-marker {
+    left: 16.6%;
+}
+
+/* Posizione marker inglese verso C1 */
+.english-marker {
+    left: 58%;
+    opacity: 0.75;
+}
+
+/* Livelli sotto la barra */
+.language-levels {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 12px;
+
+    font-size: 0.85rem;
+    color: #cbd5e1;
+}
+.japanese-marker {
+    left: 0%;
+    opacity: 0.55;
+}
+
+
+/* Piccolo effetto hover */
+.language-card:hover {
+    border-color: rgba(96, 165, 250, 0.5);
+    box-shadow: 0 15px 35px rgba(96, 165, 250, 0.18);
+}
 /* Responsive */
-@media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
+        .language-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .language-card {
+        padding: 20px;
+    }
+
+    .language-levels {
+        font-size: 0.75rem;
+    }
+
+    .language-marker span {
+        font-size: 0.75rem;
+    }
 
     .container {
         padding: 40px 15px;
