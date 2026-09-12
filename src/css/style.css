@@ -1,0 +1,143 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at center, #030712 0%, #0f172a 38%, transparent 68%),
+        radial-gradient(circle at top left, rgba(59, 130, 246, 0.55), transparent 38%),
+        radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.55), transparent 38%),
+        linear-gradient(135deg, #1e3a8a, #581c87);
+        background-attachment: fixed;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+ img {
+  
+
+    width: 30vw;
+    height: auto;
+    clip-path: circle(38%);
+    
+ }
+    
+h1 {
+    
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+h2 {
+    font-size: 1.5rem;
+    
+    text-align: left;
+}
+h3 {
+    font-size: 1.2rem;
+   
+
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1rem;
+    border:#1e3a8a 2px solid;   
+    border-radius: 20px;
+    background: rgba(11, 33, 80, 0.5);
+    padding: 1rem;  
+    width: 100%;
+    max-width: 900px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px grey;
+
+    
+} 
+li {
+   font-size: 1.2rem;
+}
+
+
+
+#name {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+   
+strong {
+   font-size: 1.2rem;
+    color: #3b82f6;
+}
+
+#experience {
+   padding: 2rem;           
+}
+
+#experience h2 {
+    text-align: left;      
+}
+#experience p {
+    text-align: left;
+    margin-left: 1rem;      
+}
+#experience h1 {
+    align-self: center;
+}
+
+/*Competenze tecniche */
+#programmingLanguages-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+#programmingLanguages-container li {
+   display: flex;
+   flex-direction: column;
+
+   
+   text-align: center;
+   margin: 1rem;
+   border: 2px solid #3b82f6;
+   border-radius: 10px;
+   padding: 0.5rem;
+    
+}
+.developing-language {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3b82f6;
+}
+.language-level {
+    visibility: hidden;
+    font-size: 1.2rem;
+    color: #a855f7;
+
+}
+#otherskills-container {
+   font-size: 1.2rem;
+    
+}
+/*animation programming languages*/
+#programmingLanguages-container li:hover .language-level {
+    visibility: visible;
+    
+}
+#programmingLanguages-container li:hover  {
+    box-shadow: 0px 0px 20px #3b82f6;
+   transform: scale(1.05);
+
+
+    
+}
+
