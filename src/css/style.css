@@ -23,9 +23,13 @@ header {
  img {
   
 
-    width: 30vw;
-    height: auto;
-    clip-path: circle(38%); /*ritaglia*/
+  width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid white  ;
+    
     
  }
     
@@ -55,7 +59,7 @@ section {
     background: rgba(11, 33, 80, 0.5);
     padding: 1rem;  
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
     box-sizing: border-box;
     box-shadow: 0px 0px 6px grey;
 
@@ -71,6 +75,10 @@ a {
 strong {
    font-size: 1.2rem;
     color: #3b82f6;
+}
+span
+{
+    pointer-events: none;
 }
 
 
@@ -141,7 +149,7 @@ strong {
     
 }
 #programmingLanguages-container li:hover  {
-    box-shadow: 0px 0px 20px #3b82f6;
+    box-shadow: 0px 0px 20px white;
    transform: scale(1.05);
 
 
@@ -150,16 +158,17 @@ strong {
 
 /*Lingue */
 .speak-language {
-    width: 500px;
+    width: 800px;
    
 }
 #language-levelbar-italian {
    
     background:linear-gradient(to right, #3b82f6, #a855f7);
-    width: 85%;
+    width: 87%;
     padding: 10px;
     border:white 2px solid;
     border-radius: 10px;
+    
 
 
   
@@ -167,7 +176,7 @@ strong {
 #language-levelbar-english {
    
     background:linear-gradient(to right, #3b82f6, #a855f7);
-    width: 45%;
+    width: 48%;
     padding: 10px;
    border:white 2px solid;
     border-radius: 10px;
@@ -177,7 +186,7 @@ strong {
 #language-levelbar-french {
    
     background:linear-gradient(to right, #3b82f6, #a855f7);
-    width: 7%;
+    width: 8%;
     padding: 10px;
     border:white 2px solid;
     border-radius: 10px;
@@ -188,27 +197,29 @@ strong {
     justify-content: space-between;
     margin-top: 5px;
     gap: 10%;
+    
+    
+
 }       
-.language-levelbar :hover {
-    box-shadow: 0px 0px 20px #3b82f6;
+.language-levelbar:hover {
+   box-shadow: 0px 0px 10px white;
    transform: scale(1.05);
     
 }
 
 /*Progetti*/
-.contact
+#projects
 {
-    
-
-    
+    display: grid;
 
 }
-.project-container
+/* .project-container
 {
+
     
 
 
-}
+} */
 
 
 
@@ -236,6 +247,10 @@ strong {
     padding: 0.5rem;
     border: 1px solid white;
     border-radius: 10px;
+}
+.contact-container:hover
+{
+    box-shadow:0px 0px 10px white ;
 }
 
 
