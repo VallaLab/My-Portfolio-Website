@@ -77,6 +77,21 @@ span
 {
     pointer-events: none;
 }
+/*About me*/
+main{
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 1700px;
+}
+main h1{
+    font-size: 4rem;
+}
+main div{
+    font-size: clamp(1.10rem, 1.1rem + 0.75vw, 1.7rem);
+    text-align: justify;
+    text-justify:auto;
+}
 
 .photoProfile{
   
