@@ -215,8 +215,9 @@
   <!-- /*Progetti*/ -->
   <section id="projects">
     <h1>Progetti</h1>
+    <!-- progetto secondbrain -->
     <div class="project-container">
-      <a class="project-items" id="openPopup"
+      <a class="project-items" data-popup="popUp"
         href="https://secret-fruit-e18.notion.site/My-Developer-Hub-2233abe184128011b983d827d0e5aaea?source=copy_link"
         target="_blank" rel="noopener noreferrer">
         <h2>Notion Second Brain</h2>
@@ -225,9 +226,9 @@
       </a>
       <!-- popUpSecondBrain -->
     </div>
-    <div id="popUp">
+    <div id="popUp" class="popUp" role="dialog" aria-modal="true" aria-labelledby="popUpTitle">
       <div class="popUpContent">
-        <h1 class="popUpAttention">Attenzione</h1>
+        <h1 id="popUpTitle" class="popUpAttention">Attenzione</h1>
         <div class="divPopUp">
           Si tratta di una <strong>pagina privata su Notion</strong> che utilizzo come archivio personale per
           organizzare e documentare in modo strutturato ciò che apprendo durante il mio percorso di studio.<br>
@@ -247,11 +248,76 @@
             riproduzione o il riutilizzo.</strong>
 
         </div>
-        <button id="returnBack" class="popUpButton">Esci</button>
-        <button id="goSite" class="popUpButton">Continua</button>
+        <button type="button" class="popUpButton" data-close-popup>Esci</button>
+        <button type="button" class="popUpButton" data-go-site>Continua</button>
       </div>
     </div>
+    <!-- projectMyPhotographiPortfolioProject -->
+    <div class="project-container">
+      <a class="project-items" data-popup="popUpPhoto" href="https://vallalab.github.io/My-photography-portfolio-website/"
+        target="_blank" rel="noopener noreferrer">
+        <h2>Il Mio Portfolio Fotografico</h2>
+        <img id="photo-project-photo" src="./assets/img/photoPhotoProject.webp"
+          alt="Anteprima del progetto Notion Second Brain">
 
+      </a>
+
+    </div>
+    <div id="popUpPhoto" class="popUp" role="dialog" aria-modal="true" aria-labelledby="popUpPhotoTitle">
+      <div class="popUpContent">
+        <h1 id="popUpPhotoTitle" class="popUpAttention">Il Mio Portfolio Fotografico</h1>
+        <div class="divPopUp">
+          Ho realizzato questo sito web per mettere in pratica e mostrare le mie competenze in due ambiti che mi appassionano:<strong> sviluppo web e la fotografia</strong>.<br>
+          Il progetto unisce le mie capacità di progettazione e realizzazione di un sito web alla passione per la fotografia, dalla gestione degli scatti alla <strong>post-produzione</strong>, attraverso l'utilizzo di strumenti professionali come <strong>Adobe Photoshop e Lightroom</strong>.<br><br>
+          <strong> Un portfolio che rappresenta sia il mio lato creativo sia le mie competenze tecniche.</strong>
+        </div>
+        <button type="button" class="popUpButton" data-close-popup>Esci</button>
+        <button type="button" class="popUpButton" data-go-site>Continua</button>
+      </div>
+    </div>
+    <div class="project-container">
+      <!-- ModulDrawersProject -->
+      <a class="project-items" data-popup="popUpProject3" href="https://makerworld.com/it/models/3445435-moduldrawers-mix-match-storage-system#profileId-3929570" target="_blank" rel="noopener noreferrer">
+        <h2>ModulDrawers (Stampa3D)</h2>
+        <img id="photo-project-moduldrawers" class="photo-project-photo" src="./assets/img/photoModelDrawersProject.webp" alt="ModulDrawers - Mix & Match Storage System">
+      </a>
+    </div>
+    <div id="popUpProject3" class="popUp" role="dialog" aria-modal="true" aria-labelledby="popUpProject3Title">
+      <div class="popUpContent">
+        <h1 id="popUpProject3Title" class="popUpAttention">ModulDrawers</h1>
+        <div class="divPopUp">
+          <strong>ModulDrawers</strong> è un progetto personale nato dalla mia idea di creare un sistema modulare stampabile in 3D, pensato per organizzare e ottimizzare gli spazi di cassetti, armadi e scrivanie.<br>
+          Ho sviluppato il progetto utilizzando <strong>OpenSCAD e l'intelligenza artificiale</strong>, impiegando quest'ultima attivamente nella progettazione CAD e nella generazione dei modelli 3D.<br> Ho guidato l'intero processo attraverso <strong>ideazione, studio, ricerca, definizione dei requisiti e numerosi test pratici</strong>, perfezionando progressivamente i modelli fino a ottenere un prodotto funzionale e personalizzabile.<br>
+          Il progetto non si è fermato alla realizzazione tecnica: ho curato personalmente anche <strong>l'identità visiva e la presentazione commerciale del prodotto</strong>, mettendo in pratica le mie competenze fotografiche e di post-produzione con <strong>Adobe Photoshop e Lightroom</strong>.<br> Ho realizzato immagini pensate non solo per mostrare il prodotto, ma anche per valorizzarlo, comunicarne le caratteristiche e renderlo accattivante in un contesto di promozione e vendita.<br><br>
+          Un progetto completo che dimostra la mia capacità di <strong>seguire lo sviluppo di un prodotto dall'idea iniziale fino alla sua presentazione al pubblico</strong>, integrando progettazione, intelligenza artificiale, sperimentazione, fotografia, branding e comunicazione visiva.
+
+        </div>
+        <button type="button" class="popUpButton" data-close-popup>Esci</button>
+        <button type="button" class="popUpButton" data-go-site disabled>Continua</button>
+      </div>
+    </div>
+    <!--projectVasoSmart -->
+    <div class="project-container">
+      <a class="project-items" data-popup="popUpProject4" href="https://github.com/VallaLab/Smart-Vase" target="_blank" rel="noopener noreferrer">
+        <h2>Vaso Smart (IoT)</h2>
+        <img class="photo-project-photo" src="./assets/img/photoVaseProject.webp" alt="Anteprima del progetto Vaso Smart">
+      </a>
+    </div>
+    <div id="popUpProject4" class="popUp" role="dialog" aria-modal="true" aria-labelledby="popUpProject4Title">
+      <div class="popUpContent">
+        <h1 id="popUpProject4Title" class="popUpAttention">Vaso Smart </h1>
+        <div class="divPopUp">
+          <strong>Smart Vase</strong> è un progetto personale nato dalla mia idea di creare un vaso intelligente, capace di monitorare l'umidità del terreno e comunicare lo stato della pianta attraverso un display e notifiche sullo smartphone.<br>
+          Ho seguito l'intero processo di <strong>ideazione, ricerca, progettazione e sperimentazione</strong>, individuando le soluzioni più adatte per integrare stampa 3D, elettronica e programmazione in un unico prodotto.<br>
+          Per la struttura ho utilizzato <strong>OpenSCAD e la stampa 3D</strong>, realizzando diversi prototipi e test per perfezionare incastri, tolleranze, passaggio dei cavi e disposizione dei componenti elettronici. Una delle sfide principali è stata <strong>l'integrazione del display OLED</strong>, che ha richiesto particolare attenzione alla visibilità, al fissaggio e alla precisione delle misure.<br>
+          Ho inoltre definito la <strong>logica di funzionamento del sistema</strong>, basato su ESP32 e sensore di umidità, progettando il comportamento del display, le condizioni di allarme e la connessione al servizio cloud <strong>Blynk IoT</strong>, per consentire il monitoraggio da remoto e l'invio di notifiche.<br>
+          Durante lo sviluppo ho utilizzato ampiamente <strong>l'intelligenza artificiale per la modellazione CAD e la realizzazione del firmware C++</strong>, guidandone il lavoro attraverso requisiti, verifiche, prove pratiche e continue revisioni.<br><br>
+          Il risultato è un <strong>prototipo IoT funzionante nelle sue componenti principali, ancora in fase di perfezionamento</strong>, che rappresenta la mia capacità di <strong>trasformare un'idea in una soluzione concreta</strong>, affrontando problemi reali e integrando progettazione 3D, elettronica, software, intelligenza artificiale e problem solving.<br>
+        </div>
+        <button type="button" class="popUpButton" data-close-popup>Esci</button>
+        <button type="button" class="popUpButton" data-go-site disabled>Continua</button>
+      </div>
+    </div>
   </section>
   <!-- */Contatti/* -->
   <section id="contact">

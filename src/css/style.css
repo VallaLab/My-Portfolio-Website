@@ -238,22 +238,32 @@ main div{
 
 /*Progetti*/
 
+#projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+#projects > h1 {
+    grid-column: 1 / -1;
+}
+
 .project-container
 
 { 
-    
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
     gap: 20px;
-    width: 100%;
-    aspect-ratio:2 ;
-
-    
+    aspect-ratio: auto;
+    min-width: 0;
 
 
 }
 .project-items
 {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
    background: rgba(0, 0, 0, 0.3);;
    border:2px solid white ;
    border-radius: 10px;
@@ -264,18 +274,33 @@ main div{
 
 }
 
-#photo-project-notion {
-  width: 100%;
-  background: url("../../assets/img/img-project-notion.png") center / cover no-repeat;
+.project-items img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1703 / 1261;
+    object-fit: cover;
+    object-position: top;
+}
+
+#photo-project-moduldrawers {
+    object-position: right top;
+}
+
+.description-projects{
+    margin: 1rem;
+    font-size: 1.4rem;
+
 }
 
 /*Popup*/
-#popUp{
+.popUp{
     
     display: none;
     position: fixed;
     inset: 0;
     z-index: 1000;
+    padding: 1rem;
+    box-sizing: border-box;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -287,6 +312,8 @@ main div{
     width: 100%;
     min-width: 250px;
     max-width: 800px;
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
     box-sizing: border-box;
     margin: 0;
     padding: 20px;
@@ -312,6 +339,11 @@ main div{
     font-size: 1.3rem;
     
 
+}
+
+.popUpButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 
@@ -382,8 +414,7 @@ main div{
         height: 180px;
     }
 
-    .project-container {
+    #projects {
         grid-template-columns: 1fr;
-        aspect-ratio: auto;
     }
 }
