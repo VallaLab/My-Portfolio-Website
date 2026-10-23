@@ -168,6 +168,10 @@ main div{
     color: #d8b4fe;
 
 }
+#language-specific{
+    padding-top: 1rem;
+    font-size: 1.3rem;
+}
 #otherskills-container {
    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.2rem);
     
